@@ -10,6 +10,17 @@
       "cost": 0,
       "services": [],
       "id": "cUts6MtPtC0"
+    },
+    {
+      "name": "CRUD",
+      "budget": "365",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "PWaRrZuVp1I"
     }
   ],
   "categories": [
