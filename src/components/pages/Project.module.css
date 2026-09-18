@@ -20,6 +20,7 @@
 
 .details_container,
 .service_form_container {
+  width: 100%;
   border-bottom: 1px solid #7a7a7a;
   padding-bottom: 1.2em;
   margin-bottom: 1.2em;
@@ -43,6 +44,6 @@
   color: #ffbb33;
 }
 
-.form {
+.project_info {
   width: 100%;
 }
