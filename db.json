@@ -7,61 +7,25 @@
         "id": "5",
         "name": "Teste"
       },
-      "cost": 906,
+      "cost": 248,
       "services": [
         {
-          "name": "fds",
-          "cost": "100",
-          "description": "aquilo",
-          "id": "aff154e9-4c9e-4447-87b7-b2578b093327"
+          "name": "gnn",
+          "cost": "85",
+          "description": "adhbn",
+          "id": "f28e08b3-35e0-42b8-b397-45587bda8888"
         },
         {
-          "name": "fds",
-          "cost": "99",
-          "description": "aquilo",
-          "id": "85b294b5-48e8-4f9b-b3a5-01df9e8dd039"
+          "name": "xgn",
+          "cost": "85",
+          "description": "fgul",
+          "id": "f9f5613a-9d28-4249-a8e3-26510b5e9fa2"
         },
         {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
-        },
-        {
-          "name": "service",
-          "cost": "101",
-          "description": "outro",
-          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+          "name": "rtj",
+          "cost": "78",
+          "description": "xfgjnmsfg",
+          "id": "6a51474c-5b92-485f-bd2a-2c4f052199c0"
         }
       ],
       "id": "cUts6MtPtC0"
@@ -73,27 +37,8 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 350,
-      "services": [
-        {
-          "name": "EC2",
-          "cost": "200",
-          "description": "Instância AWS",
-          "id": "1948831e-9f83-4cff-84f7-ebe09d4810d3"
-        },
-        {
-          "name": "S3",
-          "cost": "50",
-          "description": "AWS",
-          "id": "d2641222-b46b-4d0f-b44e-f8ce5c5a482d"
-        },
-        {
-          "name": "Café",
-          "cost": "100",
-          "description": "necessidade",
-          "id": "7b4b1c83-26e0-444b-903e-c1d24264059c"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": "PWaRrZuVp1I"
     }
   ],
