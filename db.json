@@ -1,11 +1,11 @@
 {
   "projects": [
     {
-      "name": "Olho",
-      "budget": "98",
+      "name": "Olho atualizado",
+      "budget": "130",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "5",
+        "name": "Teste"
       },
       "cost": 0,
       "services": [],
