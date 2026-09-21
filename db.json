@@ -73,8 +73,27 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 350,
+      "services": [
+        {
+          "name": "EC2",
+          "cost": "200",
+          "description": "Instância AWS",
+          "id": "1948831e-9f83-4cff-84f7-ebe09d4810d3"
+        },
+        {
+          "name": "S3",
+          "cost": "50",
+          "description": "AWS",
+          "id": "d2641222-b46b-4d0f-b44e-f8ce5c5a482d"
+        },
+        {
+          "name": "Café",
+          "cost": "100",
+          "description": "necessidade",
+          "id": "7b4b1c83-26e0-444b-903e-c1d24264059c"
+        }
+      ],
       "id": "PWaRrZuVp1I"
     }
   ],
