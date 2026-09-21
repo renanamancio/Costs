@@ -7,8 +7,63 @@
         "id": "5",
         "name": "Teste"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 906,
+      "services": [
+        {
+          "name": "fds",
+          "cost": "100",
+          "description": "aquilo",
+          "id": "aff154e9-4c9e-4447-87b7-b2578b093327"
+        },
+        {
+          "name": "fds",
+          "cost": "99",
+          "description": "aquilo",
+          "id": "85b294b5-48e8-4f9b-b3a5-01df9e8dd039"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        },
+        {
+          "name": "service",
+          "cost": "101",
+          "description": "outro",
+          "id": "de68d5ba-7643-4066-9211-078b700f9fc2"
+        }
+      ],
       "id": "cUts6MtPtC0"
     },
     {
