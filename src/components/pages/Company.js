@@ -19,36 +19,33 @@ function Company() {
     function addData(id){
         const dayId = days.find( d => d.id === id)
         if(dayId && dayId.selected) {
-            setDays(days.map(day => day.id === id ? {...day, style:'default', selected: false} : day))
+            setDays(days.map(day => day.id === id ? {...day, selected: false} : day))
            // setDaySelected(daySelected.filter(dia => dia !=id))
         } else{
-            setDays(days.map(day => day.id === id ? {...day, style:'selected', selected: true} : day))
+            setDays(days.map(day => day.id === id ? {...day, selected: true} : day))
            // setDaySelected([...daySelected, id])
         }
     }
 
-    function getStyle(id){
-        const day = days.find( d => d.id === id)
-        return day ? day.style : 'default'
-    }
+
     
     return (
-        <div className={styles.company}>
-            <h1>Escolha os dias de funcionamento da empresa</h1>
-            
-            <div className={styles.buttons}>
+        <div className={"flex-col w-full font-mono"}>
+            <h1 className={"flex mb-8"}>Escolha os dias de funcionamento da empresa</h1>            
+            <div className={"flex gap-5"}>
                 {days.length> 0 &&
                     days.map((day, index) => (
                         <Button
                             key={index}
-                            type={getStyle(day.id)}
+                            type={day.selected}
                             text={day.text}
                             onClick={() => addData(day.id)}
                         />
                 ))}
             </div>
             <div className={styles.select}>
-                {daySelected.join('-')}
+                <p>A empresa funcionará nos seguintes dias: </p>
+                <span>{daySelected.join('-')}</span>
             </div>
             
         </div>

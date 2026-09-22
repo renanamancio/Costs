@@ -1,5 +1,6 @@
 import styles from '../project/ProjectCard.module.css'
 import {BsFillTrashFill} from 'react-icons/bs'
+import { MdOutlineEdit } from "react-icons/md";
 
 function ServiceCard({id, name, cost, description, handleRemove}) {
     
@@ -7,6 +8,12 @@ function ServiceCard({id, name, cost, description, handleRemove}) {
         e.preventDefault()
         handleRemove(id, cost)
     }
+
+    const edit = (e) => {
+        e.preventDefault()
+        handleRemove(id, cost)
+    }
+
 
     return (
         <div className={styles.project_card}>
@@ -21,6 +28,10 @@ function ServiceCard({id, name, cost, description, handleRemove}) {
                 <button onClick={remove}>
                     <BsFillTrashFill />
                     Excluir
+                </button>
+                <button onClick={edit}>
+                    <MdOutlineEdit />
+                    Editar
                 </button>
             </div>
         </div>
