@@ -1,16 +1,22 @@
-.button {
-    background-color: #222;
-    color: #FFF;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    transition: 0.5s;
-
+.company h1 {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button:active {
-    background-color: #ffbb33;
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%
 }
 
-.button:active {
-    background-color: #ffbb33;
+.select {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
 }
