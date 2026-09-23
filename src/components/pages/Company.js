@@ -30,12 +30,12 @@ function Company() {
 
     
     return (
-        <div className={"flex-col w-full font-mono"}>
+        <div className={"flex flex-col gap-20"}>
             <h1 className={"flex mb-8"}>Escolha os dias de funcionamento da empresa</h1>            
-            <div className={"flex gap-5"}>
+            <div className={"flex gap-2 row-4"}>
                 {days.length> 0 &&
                     days.map((day, index) => (
-                        <Button
+                        <Button 
                             key={index}
                             type={day.selected}
                             text={day.text}

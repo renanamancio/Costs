@@ -2,7 +2,7 @@ import styles from '../project/ProjectCard.module.css'
 import {BsFillTrashFill} from 'react-icons/bs'
 import { MdOutlineEdit } from "react-icons/md";
 
-function ServiceCard({id, name, cost, description, handleRemove}) {
+function ServiceCard({id, name, cost, description, handleRemove, handleEdit}) {
     
     const remove = (e) => {
         e.preventDefault()
@@ -11,7 +11,7 @@ function ServiceCard({id, name, cost, description, handleRemove}) {
 
     const edit = (e) => {
         e.preventDefault()
-        handleRemove(id, cost)
+        handleEdit({id, name, cost, description})
     }
 
 

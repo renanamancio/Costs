@@ -17,9 +17,11 @@ function Project () {
     const [project, setProject] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [showServiceForm, setShowServiceForm] = useState(false)
+    const [showServiceFormEdit, setShowServiceFormEdit] = useState(false)
     const [message, setMessage] = useState()
-    const[type, setType] = useState()
-    const[services, setServices] = useState([])
+    const [type, setType] = useState()
+    const [services, setServices] = useState([])
+    const [serviceEdit, setServiceEdit] = useState({})
 
 
     useEffect(() => {
@@ -133,18 +135,34 @@ function Project () {
             .catch((err) => console.log(err))
     }
 
-    function editService(id, cost){
+    function editService(serviceUpdated){
 
         setMessage('')
 
-        const servicesUpdated = project.services.filter(
-            (service) => service.id !== id
-        )
+        const oldService = project.services.find( s => s.id === serviceUpdated.id)
+        const oldCost = parseFloat(oldService.cost)
+        const newCost = parseFloat(serviceUpdated.cost)
+        const newProjectCost = (parseFloat(project.cost) - oldCost) + newCost
 
-        const projectUpdated = project
+        if(newProjectCost > parseFloat(project.budget)) {
+            setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+            setType('error')
+            return false
+        }
 
-        projectUpdated.services = servicesUpdated
-        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+        const servicesUpdated = project.services.map((service) => {
+            if(service.id === serviceUpdated.id) {
+                return serviceUpdated
+            }
+            return service
+        })
+
+        const projectUpdated = {
+            ...project,
+            cost: newProjectCost,
+            services: servicesUpdated,
+        }
+
         
         fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
             method: 'PATCH',
@@ -155,9 +173,10 @@ function Project () {
         })
             .then((resp) => resp.json())
             .then((data) => {
-                setProject(projectUpdated)
-                setServices(servicesUpdated)
-                setMessage('Serviço removido com sucesso!')
+                setProject(data)
+                setServices(data.services)
+                setShowServiceFormEdit(false)
+                setMessage('Serviço atualizado com sucesso!')
                 setType('success')
             })
             .catch((err) => console.log(err))
@@ -169,6 +188,11 @@ function Project () {
 
     function toggleServiceForm(){
         setShowServiceForm(!showServiceForm)
+    }
+
+    function editServiceForm(service){
+        setServiceEdit(service)
+        setShowServiceFormEdit(true)
     }
 
     return (
@@ -226,7 +250,7 @@ function Project () {
                                         description={service.description}
                                         key={service.id}
                                         handleRemove={removeService}
-                                        handleEdit={editService}
+                                        handleEdit={editServiceForm}
                                     />
                                 ))
                             }
@@ -234,6 +258,17 @@ function Project () {
 
                             }
                         </Container>
+                        <div className={styles.project_info}>
+                                {showServiceFormEdit && (
+                                    <ServiceForm 
+                                        key={serviceEdit.id}
+                                        handleSubmit={editService}
+                                        btnText='Editar Serviço'
+                                        projectData={project}
+                                        serviceData={serviceEdit}
+                                    />
+                                )}
+                            </div>
                     </Container>
                 </div>
             ) : (

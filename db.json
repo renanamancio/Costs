@@ -7,25 +7,13 @@
         "id": "5",
         "name": "Teste"
       },
-      "cost": 370,
+      "cost": 799,
       "services": [
         {
-          "name": "gnn",
-          "cost": "85",
-          "description": "adhbn",
-          "id": "f28e08b3-35e0-42b8-b397-45587bda8888"
-        },
-        {
-          "name": "xgn",
-          "cost": "85",
-          "description": "fgul",
-          "id": "f9f5613a-9d28-4249-a8e3-26510b5e9fa2"
-        },
-        {
-          "name": "fds",
-          "cost": "200",
-          "description": "ex",
-          "id": "b11375b0-3412-4442-8189-926a5bb98e25"
+          "id": "fa6b67a9-f95f-4c66-b5f2-e87b444266db",
+          "name": "GOVi",
+          "cost": "799",
+          "description": "serpros"
         }
       ],
       "id": "cUts6MtPtC0"
