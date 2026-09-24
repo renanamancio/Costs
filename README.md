@@ -1,70 +1,185 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <img src="./src/img/costs_logo.png" alt="Costs Logo" width="120" />
 
-## Available Scripts
+  # Costs — Gerenciador de Projetos e Custos
 
-In the project directory, you can run:
+  <p>
+    <strong>Planeje, gerencie e controle os custos dos seus projetos em um só lugar.</strong>
+  </p>
 
-### `npm start`
+  <p>
+    <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+    <img src="https://img.shields.io/badge/React_Router-v7-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" alt="React Router" />
+    <img src="https://img.shields.io/badge/JSON_Server-Mock_API-000000?style=for-the-badge&logo=json&logoColor=white" alt="JSON Server" />
+    <img src="https://img.shields.io/badge/CSS_Modules-Estilização-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Modules" />
+    <img src="https://img.shields.io/badge/Status-Em_Evolução-FFB800?style=for-the-badge" alt="Status" />
+  </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <p>
+    <a href="#-sobre-o-projeto">Sobre</a> •
+    <a href="#-foco-no-front-end">Foco no Front-end</a> •
+    <a href="#-funcionalidades">Funcionalidades</a> •
+    <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+    <a href="#-como-executar-o-projeto">Como Executar</a> •
+    <a href="#-próximas-melhorias">Próximas Melhorias</a> •
+    <a href="#-créditos">Créditos</a>
+  </p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</div>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Sobre o Projeto
 
-### `npm run build`
+O **Costs** é uma aplicação web voltada para a gestão orçamentária de projetos. Ele permite que o usuário cadastre projetos, determine um orçamento total, selecione categorias e vincule múltiplos serviços/despesas a cada projeto, controlando os gastos em tempo real e impedindo que o orçamento previsto seja ultrapassado.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto foi construído com base no renomado curso de React ministrado por **Matheus Battisti (Hora de Codar)** e faz parte do meu **portfólio pessoal**, servindo como demonstração prática de fundamentos sólidos de desenvolvimento Front-end com o ecossistema React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> 💡 **Nota sobre o estágio do projeto:**  
+> Esta é uma versão inicial e funcional, desenvolvida para consolidar arquitetura, gerenciamento de estado e fluxo de dados. O projeto está em constante evolução e novas melhorias visuais e técnicas estão sendo implementadas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🎯 Foco no Front-end & Simulação de API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O objetivo primordial deste projeto foi **aprofundar e consolidar as habilidades de Front-end**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Componentização e Reutilização:** Construção de componentes atômicos (Inputs, Selects, Botões, Cards, Mensagens de feedback).
+- **Roteamento SPA (Single Page Application):** Navegação fluida sem recarregamento de página utilizando React Router.
+- **Gerenciamento de Estado e Ciclo de Vida:** Utilização de React Hooks (`useState`, `useEffect`) para controle de estados locais e efeitos colaterais.
+- **Consumo de APIs REST:** Implementação de operações assíncronas utilizando a `Fetch API` para requisições `GET`, `POST`, `PATCH` e `DELETE`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔄 Por que o JSON Server?
+Como o objetivo principal era praticar e lapidar a camada do Front-end, o **[JSON Server](https://github.com/typicode/json-server)** foi adotado para simular uma API RESTful completa de forma rápida e realista. Através de um arquivo local (`db.json`), a aplicação consegue persistir dados de projetos e categorias em tempo de execução sem demandar a construção de uma camada de infraestrutura/backend complexa no momento.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ✨ Funcionalidades
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [x] **CRUD Completo de Projetos:**
+  - Criação de novos projetos com nome, orçamento total e categoria.
+  - Listagem de projetos cadastrados com exibição de orçamento e despesas.
+  - Edição dos dados do projeto (nome, orçamento e categoria).
+  - Remoção de projetos com atualização instantânea da listagem.
+- [x] **Gestão de Serviços e Despesas:**
+  - Adição de novos serviços com custo e descrição dentro de um projeto.
+  - Validação em tempo real para impedir custos superiores ao orçamento disponível.
+  - Exclusão de serviços cadastrados com recálculo automático do custo total do projeto.
+- [x] **Feedback ao Usuário:**
+  - Mensagens visuais temporizadas (Flash Messages) notificando ações com sucesso ou mensagens de alerta/erro.
+  - Componente de Loading animado enquanto dados são requisitados da API.
+- [x] **Navegação Dinâmica:**
+  - Rotas dedicadas para visualização detalhada de cada projeto (`/project/:id`), criação (`/newproject`), listagem (`/projects`), páginas institucionais (`/company`, `/contact`).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠️ Tecnologias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Ferramenta | Descrição |
+| :--- | :--- |
+| **[React](https://react.dev/)** (v19) | Biblioteca principal para construção da interface declarativa em componentes. |
+| **[React Router DOM](https://reactrouter.com/)** (v7) | Gerenciamento de rotas e navegação da SPA. |
+| **[JSON Server](https://github.com/typicode/json-server)** | Mock API para simulação de requisições RESTful (`db.json`). |
+| **[CSS Modules](https://github.com/css-modules/css-modules)** | Estilização escopada e modularizada, evitando conflitos de classes globais. |
+| **[React Icons](https://react-icons.github.io/react-icons/)** | Pacote de ícones vetoriais modernos para a interface. |
+| **[UUID](https://github.com/uuidjs/uuid)** | Geração de identificadores exclusivos para serviços vinculados aos projetos. |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📂 Estrutura de Pastas
 
-### Making a Progressive Web App
+```text
+costs/
+├── public/                 # Arquivos públicos e index.html
+├── src/
+│   ├── components/
+│   │   ├── form/          # Inputs, Selects e botões de formulário reutilizáveis
+│   │   ├── layout/        # Navbar, Footer, Container, Loader e mensagens
+│   │   ├── pages/         # Páginas da aplicação (Home, Projects, Project, etc.)
+│   │   ├── project/       # Cards e formulários de projetos
+│   │   └── service/       # Cards e formulários de serviços
+│   ├── img/               # Imagens e ícones estáticos
+│   ├── App.js             # Configuração de rotas e layout raiz
+│   └── index.js           # Ponto de entrada da aplicação
+├── db.json                # Banco de dados simulado pelo JSON Server
+└── package.json           # Dependências e scripts do projeto
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🚀 Como Executar o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (recomendado versão 18 ou superior)
+- Gerenciador de pacotes [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
 
-### Deployment
+### Passo a Passo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/SEU-USUARIO/costs.git
+   ```
 
-### `npm run build` fails to minify
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd costs
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o Backend Simulado (JSON Server):**
+   > Abra um terminal e execute o comando abaixo. O servidor mock rodará na porta `5000`:
+   ```bash
+   npm run backend
+   ```
+   *Você poderá verificar os dados simulados acessando `http://localhost:5000/projects` e `http://localhost:5000/categories`.*
+
+5. **Inicie a Aplicação Front-end (React):**
+   > Em **outro terminal**, execute:
+   ```bash
+   npm start
+   ```
+
+6. **Acesse no navegador:**
+   Abra [http://localhost:3000](http://localhost:3000) para interagir com o Costs.
+
+---
+
+## 🔮 Próximas Melhorias (Roadmap)
+
+Sendo um projeto em constante aprimoramento para portfólio, os seguintes pontos estão mapeados para próximas iterações:
+
+- [ ] **Responsividade Aprimorada:** Otimização dos layouts para dispositivos móveis e tablets.
+- [ ] **Evolução do Design:** Refinamento da identidade visual e transição para utilitários modernos (Tailwind CSS).
+- [ ] **Testes Automatizados:** Implementação de testes unitários e de integração com React Testing Library e Jest.
+- [ ] **Filtros e Busca:** Adicionar filtragem de projetos por categoria e busca por nome.
+- [ ] **Backend Real:** Futura migração do JSON Server para uma API própria em Node.js / NestJS com banco de dados PostgreSQL/MongoDB.
+- [ ] **Autenticação:** Adição de sistema de login e cadastro de usuários com JWT.
+
+---
+
+## 🎓 Créditos e Reconhecimentos
+
+- Projeto desenvolvido com base no curso ministrado por **[Matheus Battisti](https://github.com/matheusbattisti)** no canal **[Hora de Codar](https://www.youtube.com/@MatheusBattisti)**.
+- Um agradecimento especial pelo conteúdo didático que serve como excelente base para a comunidade de desenvolvedores.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Renan Amancio**.
+
+- **LinkedIn:** [linkedin.com/in/SEU-LINKEDIN](https://www.linkedin.com) *(personalize seu link)*
+- **GitHub:** [@renanamancio](https://github.com/renanamancio)
+
+---
+
+<div align="center">
+  Feito com 💙 para fins de estudo e portfólio.
+</div>
