@@ -175,7 +175,7 @@ Sendo um projeto em constante aprimoramento para portfólio, os seguintes pontos
 
 Desenvolvido por **Renan Amancio**.
 
-- **LinkedIn:** [linkedin.com/in/renan-amancio](https://www.linkedin.com/in/renan-amancio/) *(personalize seu link)*
+- **LinkedIn:** [linkedin.com/in/renan-amancio](https://www.linkedin.com/in/renan-amancio/)
 - **GitHub:** [@renanamancio](https://github.com/renanamancio)
 
 ---
