@@ -157,7 +157,7 @@ Sendo um projeto em constante aprimoramento para portfólio, os seguintes pontos
 
 - [ ] **Responsividade Aprimorada:** Otimização dos layouts para dispositivos móveis e tablets.
 - [ ] **Evolução do Design:** Refinamento da identidade visual e transição para utilitários modernos (Tailwind CSS).
-- [ ] **Testes Automatizados:** Implementação de testes unitários e de integração com React Testing Library e Jest.
+- [ ] **Testes Automatizados:** Implementação de testes unitários, de integração com React Testing Library e Jest, e de UI com RobotFramework + Selenium.
 - [ ] **Filtros e Busca:** Adicionar filtragem de projetos por categoria e busca por nome.
 - [ ] **Backend Real:** Futura migração do JSON Server para uma API própria em Node.js / NestJS com banco de dados PostgreSQL/MongoDB.
 - [ ] **Autenticação:** Adição de sistema de login e cadastro de usuários com JWT.
@@ -175,7 +175,7 @@ Sendo um projeto em constante aprimoramento para portfólio, os seguintes pontos
 
 Desenvolvido por **Renan Amancio**.
 
-- **LinkedIn:** [linkedin.com/in/SEU-LINKEDIN](https://www.linkedin.com) *(personalize seu link)*
+- **LinkedIn:** [linkedin.com/in/renan-amancio](https://www.linkedin.com/in/renan-amancio/) *(personalize seu link)*
 - **GitHub:** [@renanamancio](https://github.com/renanamancio)
 
 ---
